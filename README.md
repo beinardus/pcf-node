@@ -5,7 +5,7 @@ Based on the documentation in: [PICOOLFAN4 DAEMONS, AND PYTHON SCRIPTS](https://
 
 ## Required hardware
 
-- PiCoolFAN4 voor Raspberry Pi ([The PI Hut](https://thepihut.com/products/picoolfan4))
+- PiCoolFAN4 voor Raspberry Pi ([The Pi Hut](https://thepihut.com/products/picoolfan4))
 - Raspberry Pi 4
 
 ## Docker
