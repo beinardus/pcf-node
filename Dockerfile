@@ -1,4 +1,4 @@
-FROM balenalib/raspberrypi4-64-debian AS RaspiNode10
+FROM balenalib/raspberrypi4-64-debian AS raspi-node10
 
 RUN sudo apt-get update -y
 RUN sudo apt-get install -y python
@@ -16,7 +16,7 @@ RUN sudo apt-get install libraspberrypi-dev raspberrypi-kernel-headers
 WORKDIR /
 RUN rm -r /tmp
 
-FROM raspiNode10
+FROM raspi-node10
 
 WORKDIR /usr/pcf-node
 
