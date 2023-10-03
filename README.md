@@ -30,8 +30,8 @@ Edit the config file `~/pcf-node/config/default.json`:
 | interval       | Interval in ms to check the temperature | `1000`  |
 | verbose        | Verbose logging `true` or `false`       | `false` |
 
-Restart the Docker container after changes to the config are made:
+Restart the Docker container after changes to the config are made:  
 `docker restart pcf-daemon`
 
-Watch the output:
+Watch the output:  
 `docker logs --follow -n50 pcf-daemon`
