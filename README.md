@@ -1,14 +1,18 @@
 # pcf-node
+
 PCF (PiCoolFAN4) dynamic cooling for Raspberry PI 4. Control fan speed based on CPU core temperature.
+Based on the documentation in: [PICOOLFAN4 DAEMONS, AND PYTHON SCRIPTS](https://pimodules.com/download/picoolfan4-daemons-and-python-scripts)
 
 ## Required hardware
+
 - PiCoolFAN4 voor Raspberry PI ([The PI Hut](https://thepihut.com/products/picoolfan4))
 - Raspberry PI 4
 
 ## Docker
-I packed it into a Docker image for easy use as a service and to hide the low level libraries that are required.
 
-```
+Using a Docker image for easy installation as a service and to hide the low level libraries that are required.
+
+```shell
 git clone https://github.com/beinardus/pcf-node.git
 cd pcf-node
 docker build -t pcf-node .
@@ -16,9 +20,11 @@ docker run -d --restart always --privileged --name pcf-daemon -v ~/pcf-node/conf
 ```
 
 ## Configuration
+
 Edit the config file `~/pcf-node/config/default.json`:
-|param|description|default|
-|---|---|---|
-|maxTemperature|Upper limit of the temperature|`55`|
-|interval|Interval in ms to check the temperature|`1000`|
-|verbose|Verbose logging `true` or `false`|`false`|
+
+| param          | description                             | default |
+| -------------- | --------------------------------------- | ------- |
+| maxTemperature | Upper limit of the temperature          | `63`    |
+| interval       | Interval in ms to check the temperature | `1000`  |
+| verbose        | Verbose logging `true` or `false`       | `false` |
