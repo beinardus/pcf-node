@@ -13,10 +13,11 @@ Based on the documentation in: [PICOOLFAN4 DAEMONS, AND PYTHON SCRIPTS](https://
 Using a Docker image for easy installation as a service and to hide the low level libraries that are required.
 
 ```shell
+cd ~
 git clone https://github.com/beinardus/pcf-node.git
 cd pcf-node
 docker build -t pcf-node .
-docker run -d --restart always --privileged --name pcf-daemon -v ~/pcf-node/config/default.json:/usr/pcf-node/config/default.json pcf-node
+docker run -d --restart always --privileged --name pcf-daemon -v $PWD/config/default.json:/usr/pcf-node/config/default.json pcf-node
 ```
 
 ## Configuration
@@ -28,3 +29,6 @@ Edit the config file `~/pcf-node/config/default.json`:
 | maxTemperature | Upper limit of the temperature          | `63`    |
 | interval       | Interval in ms to check the temperature | `1000`  |
 | verbose        | Verbose logging `true` or `false`       | `false` |
+
+Restart the Docker container after changes to the config are made:
+`docker restart pcf-daemon`
