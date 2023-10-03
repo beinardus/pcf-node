@@ -32,3 +32,6 @@ Edit the config file `~/pcf-node/config/default.json`:
 
 Restart the Docker container after changes to the config are made:
 `docker restart pcf-daemon`
+
+Watch the output:
+`docker logs --follow -n50 pcf-daemon`
