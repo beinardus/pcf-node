@@ -36,6 +36,7 @@ async function setCurrentTemperature() {
 
     // pass measured temperature
     await writeBuffer(bus, [0x00, cpu_temp]);
+    await bus.close();
 }
 
 async function runAsync() {
