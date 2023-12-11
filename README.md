@@ -16,7 +16,7 @@ The Docker container runs in privileged mode to access the fan as a I2C device. 
 - Go to the `Interface Options` menu
 - Select `I2C` and enable the interface
 
-Now, the I2C devices (starting with `i2c-`) are listed between the other devices:
+Now, the I2C devices (starting with `i2c-`) are listed among the other devices:
 ```shell
 ls /dev
 ```
