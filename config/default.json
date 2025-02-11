@@ -1,0 +1,7 @@
+{
+  "sensor": {
+    "maxTemperature": 63,
+    "interval": 1000,
+    "verbose": false
+  }
+}
